@@ -1,0 +1,23 @@
+import mysql.connector
+import csv
+import tkinter as tk
+
+r = tk.Tk()
+r.title = ('My Box')
+def button1reader():
+    f = open("C:\\Users\\C605\\Desktop\\marvel.txt", "r")
+    data = f.read()
+    print(data)
+
+
+
+
+
+
+button1 = tk.Button(master=r, text = 'READ', width=15, command=button1reader, font=('Helvetica', 15))
+button1.pack()
+button2 = tk.Button(master=r, text = 'CALCULATE', width=15, command=r.destroy, font=('Helvetica', 15))
+button2.pack()
+textbox = tk.Button(master=r, text ='TEXTBOX', width=15, command=r.destroy, font=('Helvetica', 15))
+textbox.pack()
+r.mainloop()
